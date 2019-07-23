@@ -1,0 +1,133 @@
+:root {
+  --widget-input-container-bg: #333;
+  --component-width: 800px;
+  --calendar-tile-height: 100px;
+  --calendar-tile-color: rgba(45, 45, 45, 0.8);
+  --calendar-tile-now-color: rgb(56, 56, 56);
+  --reservations-border-style: 1px solid rgb(56, 56, 56);
+  --dark-bg-color: #444444;
+  --light-grey: #808080;
+}
+
+.reservation_widget {
+  width: 350px;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  border: var(--reservations-border-style);
+  border-radius: 8px;
+}
+
+.input_container {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 6px 0;
+}
+
+.date_selected {
+  width: 100%;
+  height: 50px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-bg-color);
+  margin: 2px 5px 0px 5px;
+  border-radius: 4px;
+}
+.select_cell {
+  width: 80%;
+  margin-right: 5px;
+}
+
+.icon {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.react-calendar {
+  width: 350px;
+  background-color: var(--calendar-tile-color) !important;
+  border: none;
+}
+
+.date_selected,
+.react-calendar__navigation > button,
+.react-calendar__month-view__weekdays__weekday > abbr {
+  color: white !important;
+}
+@media (min-width: 56rem) {
+  .reservation_widget {
+    width: var(--component-width);
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    border: var(--reservations-border-style);
+    border-radius: 0px;
+  }
+
+  .input_container {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
+    padding: 10px;
+    background-color: #333;
+    /* border-left: var(--reservations-border-style); */
+    margin: 0px;
+  }
+
+  .date_selected {
+    margin-left: 10px;
+    padding: 16px;
+  }
+  .select_cell {
+    flex: 3;
+  }
+
+  .icon {
+    margin: 0 20px;
+    margin-top: 5px;
+  }
+
+  .react-calendar {
+    width: var(--component-width) !important;
+  }
+
+  .react-calendar__navigation {
+    height: 80px !important;
+  }
+
+  .react-calendar__navigation > button {
+    font-size: 3rem;
+  }
+
+  .react-calendar__month-view__weekdays__weekday > abbr {
+    font-size: 2rem;
+    font-weight: normal;
+    text-decoration: none;
+  }
+  .react-calendar__tile {
+    height: var(--calendar-tile-height) !important;
+    background-color: var(--calendar-tile-color);
+  }
+
+  .react-calendar__tile--now {
+    height: var(--calendar-tile-height) !important;
+    background-color: var(--calendar-tile-now-color);
+  }
+
+  .react-calendar__navigation__arrow {
+    font-size: 1.5rem;
+  }
+
+  .react-date-picker__button {
+    min-width: auto;
+  }
+}

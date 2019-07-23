@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Merriweather:300");
+@import url("./page.section.css");
+@import url("./normalize.8.0.1.css");
+
+:root {
+  --default-px-font-size: 16px;
+  --default-rem-font-size: 1rem;
+  --font-scheme-regular: calc(var(--default-rem-font-size) + 0.1rem);
+  --font-scheme-small: 75%;
+}
+
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+body {
+  font-size: var(--default-px-font-size);
+  font-size: var(--default-rem-font-size);
+  font-family: "Lato", sans-serif;
+  line-height: 1.5;
+  color: rgba(16, 24, 32, 0.5);
+  background-color: #090909;
+  color: #b3b3b3;
+  letter-spacing: 1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  color: #b3b3b3;
+}
+
+li {
+  margin: none !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.highlight {
+  border: 1px solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: #f7d75c;
+}
+
+button,
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0.8125rem 2rem;
+  border: none;
+  background-color: transparent;
+  height: var(--nav-bar-height);
+  color: #fff;
+  letter-spacing: 0.07143em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.gift-card-button,
+.button-inverted {
+  background-color: dodgerblue;
+  border: none;
+}
+
+.button:hover,
+.hamburger-button:hover,
+.gift-card-button:hover {
+  background-color: #d1d1d1;
+}
+
+button,
+.button:hover {
+  cursor: pointer;
+}
+
+span {
+  color: white;
+}
+span.button-link {
+  padding: none;
+  text-decoration: underline;
+  padding: 0 3px;
+  color: #69676b;
+  font-weight: bolder;
+}
+a,
+span.button-link,
+.cta {
+  color: dodgerBlue;
+}
+
+.cta--down {
+  margin-top: 20px;
+}
+
+.slider-control-centerright,
+.slider-control-centerleft {
+  width: 20%;
+  height: 364px;
+  /* background-color: #18181857; */
+  display: grid;
+  place-items: center;
+}
+
+.slider-control-centerright > button,
+.slider-control-centerleft > button {
+  width: 100%;
+  height: 100%;
+  background-color: #18181857;
+  display: grid;
+  place-items: center;
+}
+
+.slider-control-bottomcenter {
+  display: none;
+}
+
+a:hover,
+span.button-link {
+  cursor: pointer;
+}
+
+@media (min-width: 40rem) {
+  h1 {
+    font-size: 3rem;
+  }
+}

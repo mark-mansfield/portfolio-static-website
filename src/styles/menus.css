@@ -1,0 +1,178 @@
+.menu__nav-bar {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.menu__nav-bar-wrap {
+  margin: 2rem 0;
+}
+
+.menu-column-left,
+.menu-column-right {
+  min-width: 50%;
+  padding-right: 2.5rem;
+}
+
+.menu-heading {
+  /* margin-top: 54px; */
+  /* margin-bottom: 54px; */
+}
+
+p > strong,
+li > strong {
+  color: #444;
+  padding-bottom: 20px;
+}
+p {
+  margin: 20px 0;
+}
+
+.venue_menus-group {
+  columns: 1;
+  column-gap: 0;
+  margin-bottom: 4rem;
+}
+
+.venue_menus-section {
+  padding-bottom: 5.375rem;
+  display: inline-block;
+  width: 100%;
+}
+
+.venue_menus-list {
+  margin-top: 3rem;
+}
+
+.venue_menus-title {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.venue_menus-title-text {
+  -ms-flex: none;
+  flex: none;
+}
+
+.venue_menus-title:after {
+  border-bottom: 0.0625rem solid;
+  content: "";
+  display: block;
+  margin-bottom: 0.375rem;
+  margin-left: 1.25rem;
+  width: 100%;
+}
+
+.venue_menus-items {
+  margin-top: 2rem;
+}
+
+.venue_menus-item {
+  display: inline-block;
+  width: 100%;
+  padding: 1.125rem 0;
+  position: relative;
+}
+
+.venue_menus-item-content {
+  -ms-flex-align: start;
+  align-items: flex-start;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.venue_menus-item-info {
+  margin-right: 2rem;
+  max-width: 24.375rem;
+}
+
+.venue_menus-item-desc,
+.venue_menus-item-price-description {
+  font-size: 0.9375rem;
+  line-height: 1.46667;
+  margin-bottom: 0;
+}
+
+.venue_menus-item-price-item {
+  -ms-flex-align: end;
+  align-items: flex-end;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 1.1875rem;
+  line-height: 1.36842;
+  margin-left: 1rem;
+  text-align: right;
+}
+
+.venue_menus-item-price,
+.venue_menus-item-additional_prices {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.venue_menus-item:after {
+  border-bottom: 0.0625rem solid grey;
+  content: "";
+  display: block;
+  opacity: 0.5;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.venue_menus-group_disclaimer {
+  font-size: 0.9375rem;
+  line-height: 1.46667;
+}
+
+@media (min-width: 56rem) {
+  .menu__nav-bar {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+
+  .menu__nav-bar-wrap {
+    margin: 3rem 0;
+  }
+
+  .venue_menus-group {
+    columns: 2;
+    column-gap: 4.75rem;
+    orphans: 1;
+    widows: 1;
+  }
+
+  .venue_menus-title {
+    margin-bottom: 2rem;
+  }
+
+  .venue_menus-items {
+    margin-top: 3rem;
+  }
+
+  .venue_menus-item-price,
+  .venue_menus-item-additional_prices {
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}

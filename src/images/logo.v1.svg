@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="77px" height="23px" viewBox="0 0 77 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M40.2100932,4.06396169 C42.2690944,7.4018117 42.4169473,7.71478252 42.4942246,7.90378087 C42.554056,8.05011139 42.6383842,7.98601855 42.1971123,8.32648423 C41.9429174,8.52260966 41.5318601,8.65736121 41.0607696,9.37379484 C40.8097556,9.75553661 40.2771478,10.8366866 40.7142565,10.9629424 C42.7347143,11.5465373 47.2849497,10.7153265 49.5418405,9.89677597 C50.3249272,9.61275865 51.0321516,9.55533873 50.8845423,8.73335933 C50.5174501,6.68916438 48.2293176,6.37499263 47.9039689,4.32359381 C47.7523146,3.36737852 49.2633704,2.59600097 49.9711726,2.43856555 C50.0037789,2.40983312 50.038273,2.41427443 50.1073089,2.34761994 C50.1463484,2.30992708 50.1844173,2.17953526 50.2188512,2.14024544 C50.2877566,2.06162303 50.370168,1.71334747 50.350067,1.67404084 C50.3515293,1.59685086 50.3080732,1.4843924 50.2196985,1.33666545 C49.6416634,1.14874652 49.2846053,1.14912874 48.7904074,1.08241745 C46.9775066,0.837695692 45.6180015,1.20241592 44.6994378,1.3425748 C43.9532264,1.45643534 43.2550992,1.69762543 42.2037128,2.06668161 C41.6447781,2.26287806 41.4670519,2.31216739 40.506672,2.91309105 C40.1872595,3.24979705 40.0189555,3.44994242 40.0017599,3.51352714 C39.9877674,3.56526804 40.0572118,3.74874623 40.2100932,4.06396169 Z" id="path-1"></path>
+        <filter x="-68.8%" y="-54.2%" width="237.6%" height="247.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="1" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.26486014 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-92.9%" y="-92.9%" width="285.7%" height="285.7%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.29925153 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(5.000000, 3.000000)">
+            <g id="Group-3">
+                <text id="ROWN" font-family="STHeitiSC-Light, Heiti SC" font-size="7" font-weight="300" fill="#6B6B6B">
+                    <tspan x="15" y="9">ROWN </tspan>
+                </text>
+                <text id="ugar" font-family="STHeitiSC-Light, Heiti SC" font-size="7" font-weight="300" fill="#6B6B6B">
+                    <tspan x="52" y="9">UGAR </tspan>
+                </text>
+                <g id="Path-3" transform="translate(45.452096, 6.079254) rotate(-4.000000) translate(-45.452096, -6.079254) ">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use stroke="#979797" stroke-width="1" xlink:href="#path-1"></use>
+                </g>
+                <g id="Group-2" filter="url(#filter-3)" stroke="#979797">
+                    <path d="M4,14 C8.74472981,12.0587322 9.9029337,11.6137095 12.5555898,9.26580566 C13.012045,8.86179062 13.7933002,7.87891629 13.9292015,7.76825166 C13.9786391,7.72799452 13.9189891,7.68025118 13.9961543,7.65926119 C14.0284185,7.65048488 13.8576689,7.52363407 13.4839055,7.27870878 C13.4022807,7.22522042 13.2580583,7.13231749 13.0512384,7" id="Path-2"></path>
+                    <path d="M0.649312439,0.453590534 L2.57196183,0.61988953 L2.89261408,0.647624253 C2.4139412,0.0735919247 2.09875954,-0.11883821 1.9470691,0.0703338484 C1.71953343,0.354091936 -0.063621578,0.196709072 0.00175332891,0.200342306 C0.0671282358,0.20397554 1.78633224,0.197233118 1.78415377,0.200342306 C1.78298215,0.202014473 -0.362154007,0.211683068 0.791351846,0.215758773 C4.08965936,0.227412749 5.57543416,0.118581181 7.38945321,0.224708595 C11.233905,0.449624495 11.785276,0.911328667 12.2603143,1.12141832 C12.9182731,1.41240606 12.9598711,2.01187281 12.2603143,2.76667258 C12.116568,2.92177035 11.8394284,3.15332341 11.5583429,3.37204623 C11.0198933,3.7910334 10.4415761,4.26391161 10.5806083,4.77045938 C10.6915634,5.17471115 11.5252821,5.43606696 12.480734,5.92551232 C12.7030358,6.03938996 13.1995328,6.35182459 13.9702248,6.86281621 L13.9702132,6.86283376 C14.0005692,6.88296072 14.0088615,6.92388529 13.9887346,6.95424134 C13.9850625,6.9597797 13.9805744,6.96473125 13.9754225,6.96892824 L13.9754225,6.96892824 C13.9331288,7.00338223 13.8746039,7.00994576 13.8257289,6.98571628" id="Path-4" stroke-linejoin="bevel"></path>
+                    <path d="M0.0400911241,1 C-0.143045507,3.98923147 0.348548411,4.89246228 0.561591411,5.74903614 C0.8582925,6.94197088 1.23467194,7.99247272 4,14" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
