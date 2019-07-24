@@ -40,7 +40,7 @@
     "gatsby"
   ],
   "license": "MIT",
-  "homepage": "https:/mark-mansfield.github.io/portfolio-static-website",
+  "homepage": "https:/mark-mansfield.github.io",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
