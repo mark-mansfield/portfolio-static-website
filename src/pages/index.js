@@ -8,16 +8,18 @@ import Divider from "@material-ui/core/Divider"
 import ListItem from "@material-ui/core/ListItem"
 import ListItemText from "@material-ui/core/ListItemText"
 import { withStyles } from "@material-ui/core/styles"
-// import ImageCarousel from "../components/imageCarousel/carousel"
+import ImageGrid from "../components/ImageGrid/imageGrid"
 import Waypoint from "react-waypoint"
 import Scroll from "../components/Scroll"
 import Layout from "../components/layout/layout"
 import Header from "../components/header/header.1"
+import Footer from "../components/footer/footer"
 import SubNav from "../components/navigation/sub__nav"
 import GoogleMap from "../components/googleMaps/map"
 import Food from "../components/menus/food/food.1"
 import Contact from "../components/contact/contact"
 import Reservation from "../components/reservation/reservation"
+import Newsletter from "../components/newsLetter/newsletter"
 import GiftCards from "../components/giftCards/giftCards"
 import { MdClose } from "react-icons/md"
 
@@ -30,6 +32,7 @@ const drawStyles = {
   fullList: {
     width: "auto",
   },
+  backgroundColor: "black",
 }
 
 class Index extends React.Component {
@@ -40,6 +43,7 @@ class Index extends React.Component {
       stickyMobileNav: false,
       modalIsOpen: false,
       giftCardModalIsOpen: false,
+      newsletterModalIsOpen: false,
       showAllTimes: false,
       showMaps: false,
       dynamicClassNameList: "",
@@ -91,12 +95,23 @@ class Index extends React.Component {
     })
   }
 
+  _handleShowNewsletterModal = () => {
+    console.log("Setting state of isOpen")
+    this.setState({
+      newsletterModalIsOpen: true,
+    })
+  }
+
   afterOpenModal() {
     // references are now sync'd and can be accessed.
   }
 
   closeModal() {
-    this.setState({ modalIsOpen: false, giftCardModalIsOpen: false })
+    this.setState({
+      modalIsOpen: false,
+      giftCardModalIsOpen: false,
+      newsletterModalIsOpen: false,
+    })
   }
 
   toggleDrawer = (side, open) => () => {
@@ -235,7 +250,9 @@ class Index extends React.Component {
     )
     return (
       <Layout>
-        <Helmet title="Brown Sugar - v2" />
+        <Helmet>
+          <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        </Helmet>
         <Header
           modalState={this._handleShowModal.bind(this)}
           giftCardModalState={this._handleShowGiftCardModal.bind(this)}
@@ -284,6 +301,26 @@ class Index extends React.Component {
           </div>
 
           <GiftCards />
+        </Modal>
+
+        <Modal
+          closeTimeoutMS={300}
+          style={style}
+          isOpen={this.state.newsletterModalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal}
+          contentLabel="Example Modal"
+        >
+          <div
+            className="modal__toolbar"
+            ref={toolbar => (this.toolbar = toolbar)}
+          >
+            <div ref={close => (this.close = close)} onClick={this.closeModal}>
+              <MdClose className="modal__close" />
+            </div>
+          </div>
+
+          <Newsletter />
         </Modal>
 
         <Drawer
@@ -548,7 +585,71 @@ class Index extends React.Component {
           </div>
         </section>
 
-        <section id="message" className="message">
+        <section id="about_us">
+          <div className="page_section container">
+            <div className="section__details">
+              <div
+                style={{
+                  width: "80%",
+                }}
+              >
+                <h1>About Us</h1>A relaxed, contemporary neighborhood bistro run
+                by dedicated industry professionals committed to delivering a
+                memorable dinning (and wining) experience. Brother and sister
+                duo Neil &amp; Lianne Gottheiner have created a unique Bondi
+                institution with a vibrant, welcoming ambience catering for
+                diners of all persuasions.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div className="parallax-1 parallax-height-lge">
+            <div
+              style={{
+                display: "grid",
+                placeItems: "center",
+                width: "100vw",
+                backgroundColor: "rgba(0,0,0,0.8)",
+                height: "100%",
+              }}
+            >
+              <div className="subscription">
+                <h1 className="subscription__heading">Subscribe</h1>
+                <div
+                  className="subscription__content"
+                  style={{
+                    color: "white",
+                  }}
+                >
+                  <div className="subscription__message">
+                    Subscribe to receive be eligible for out loyalty program
+                  </div>
+
+                  <button
+                    onClick={this._handleShowNewsletterModal}
+                    className="form-button-accent"
+                  >
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <ImageGrid />
+
+        <section>
+          <div className="parallax-1 parallax-height-lge"></div>
+        </section>
+
+        {/* <section>
+          <div className="parallax-1 parallax-height-sml" />
+        </section> */}
+
+        <section className="message">
           <div className="page_section container">
             <div className="section__details">
               <h3
@@ -566,36 +667,10 @@ class Index extends React.Component {
           </div>
         </section>
 
-        {/* <ImageCarousel /> */}
-
-        <section className="page_section container">
-          <div className="page__section-border" />
-        </section>
-
-        <section id="about_us" className="page_section container">
-          <div className="page_section container">
-            <div className="section__details">
-              <div>
-                <h1>About Us</h1>
-              </div>
-
-              <div className="section__details-info-inner-content">
-                A relaxed, contemporary neighborhood bistro run by dedicated
-                industry professionals committed to delivering a memorable
-                dinning (and wining) experience. Brother and sister duo Neil
-                &amp; Lianne Gottheiner have created a unique Bondi institution
-                with a vibrant, welcoming ambience catering for diners of all
-                persuasions.
-              </div>
-            </div>
-          </div>
-        </section>
-        <section>
-          <div className="parallax-1" />
-        </section>
-        <section className="page_section container">
-          <Food />
-          <div className="page__section-border" />
+        <section className="food">
+          <section className="page_section container">
+            <Food />
+          </section>
         </section>
 
         <section className="parallax-2" />
@@ -771,6 +846,12 @@ class Index extends React.Component {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section id="footer">
+          <div>
+            <Footer modalState={this._handleShowNewsletterModal.bind(this)} />
           </div>
         </section>
       </Layout>

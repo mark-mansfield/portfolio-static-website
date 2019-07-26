@@ -27,10 +27,10 @@
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Group" transform="translate(5.000000, 3.000000)">
             <g id="Group-3">
-                <text id="ROWN" font-family="STHeitiSC-Light, Heiti SC" font-size="7" font-weight="300" fill="#6B6B6B">
+                <text id="ROWN" font-family="STHeitiSC-Light, Heiti SC" font-size="7" font-weight="300" fill="#fff">
                     <tspan x="15" y="9">ROWN </tspan>
                 </text>
-                <text id="ugar" font-family="STHeitiSC-Light, Heiti SC" font-size="7" font-weight="300" fill="#6B6B6B">
+                <text id="ugar" font-family="STHeitiSC-Light, Heiti SC" font-size="7" font-weight="300" fill="#fff">
                     <tspan x="52" y="9">UGAR </tspan>
                 </text>
                 <g id="Path-3" transform="translate(45.452096, 6.079254) rotate(-4.000000) translate(-45.452096, -6.079254) ">

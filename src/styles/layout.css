@@ -373,7 +373,7 @@ svg {
   color: #8b8b8b;
 }
 .simple-button > small:hover {
-  color: black;
+  color: #f7d75c;
 }
 
 /* overide <small> */
@@ -548,6 +548,10 @@ svg {
     display: flex;
     justify-content: flex-start;
     width: 60%;
+  }
+
+  .messsage {
+    margin-bottom: 0px;
   }
 }
 

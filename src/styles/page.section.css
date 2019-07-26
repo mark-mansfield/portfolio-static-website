@@ -37,6 +37,7 @@
   justify-content: flex-start;
   align-items: center;
   padding: 2rem 0;
+  height: 100%;
 }
 
 .section__details-column {
@@ -116,7 +117,7 @@ div.section__details-column > div > svg {
   letter-spacing: 0.07692em;
   outline: none;
   padding: 0;
-  text-decoration: none;
+  text-decoration: underline;
   text-transform: none;
   transition: opacity 0.2s;
 }
@@ -144,9 +145,21 @@ button.cta:after {
   place-items: top;
 }
 
+section#about_us {
+  background-color: black;
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+  display: grid;
+}
+
+.message {
+  background-color: rgba(24, 24, 24, 0.8);
+}
+
 .venue-details,
-#message {
-  background-color: #18181857;
+.food {
+  background-color: rgb(18, 18, 18);
 }
 
 .section__details-location {
@@ -187,7 +200,64 @@ button.cta:after {
   height: 14rem;
 }
 
+.parallax-1,
+.parallax-2 {
+  background: none;
+}
+
+.subscription {
+  width: 90%;
+  margin: 10px 0;
+  height: 100%;
+}
+
+.subscription__heading,
+.subscription__message {
+  display: none;
+}
+
+.subscription__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscription > div > button {
+  display: block;
+  width: 90%;
+}
+
 @media (min-width: 40rem) {
+  .parallax-2 {
+    background-image: url("../images/BS-parallax-2.jpg");
+    opacity: 0.3;
+    height: 200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .parallax-1 {
+    background-image: url("../images/BS-parallax.jpg");
+    height: 200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .parallax-height-lge {
+    height: 300px;
+  }
+
+  .parallax-height-sml {
+    height: 200px;
+  }
+
+  .message {
+    margin-bottom: 0px !important;
+  }
   .container {
     max-width: 82rem;
   }
@@ -196,8 +266,35 @@ button.cta:after {
     padding: 2.5rem;
   }
 
+  .subscription {
+    width: 40%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .subscription__heading,
+  .subscription__message {
+    display: flex;
+  }
+
+  .subscription__content {
+    color: white;
+    justify-content: flex-start;
+  }
+  .subscription > div > button {
+    display: block;
+    margin-left: 20px;
+  }
+
   .scroll-top-top {
     display: none;
+  }
+
+  .venue-details {
+    height: 516px !important;
+    padding-top: 100px;
   }
 
   .section__details {
@@ -262,12 +359,13 @@ button.cta:after {
   .section__details-map {
     width: 50%;
     height: 100%;
-    margin: 0px;
+    margin-top: -100px;
   }
 
   .section__details-info {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    margin-top: 100px;
     width: 55%;
     min-width: 35%;
   }
@@ -322,23 +420,6 @@ button.cta:after {
     max-width: 1000rem;
     height: 36rem;
     margin: 0;
-  }
-  .parallax-2 {
-    background-image: url("../images/BS-parallax-2.jpg");
-    opacity: 0.5;
-    height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .parallax-1 {
-    background-image: url("../images/BS-parrallax.jpg");
-    height: 500px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 
   .page_cta--sticky {

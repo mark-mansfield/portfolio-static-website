@@ -19,7 +19,7 @@ const Imagehero = props => (
     imageName
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "hero-1.webp" }) {
+        placeholderImage: file(relativePath: { eq: "hero-1.png" }) {
           childImageSharp {
             fluid(maxWidth: 800) {
               ...GatsbyImageSharpFluid_noBase64
@@ -36,7 +36,7 @@ const Imagehero = props => (
           imgStyle={{
             objectFit: "none",
             objectPosition: "center 100px",
-            backgroundColor: "black",
+            backgroundColor: "transparent",
           }}
         />
       )

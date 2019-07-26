@@ -39,7 +39,6 @@ main {
 
 h1 {
   font-size: 3em;
-  margin: 0.67em 0;
 }
 
 /* Grouping content
@@ -169,6 +168,7 @@ textarea {
   margin: 0; /* 2 */
 }
 button:hover {
+  color: #f7d75c;
   cursor: pointer;
 }
 
@@ -213,7 +213,7 @@ button,
   position: relative;
   top: -2px;
   text-decoration: underline;
-  color: #444;
+  color: dodgerBlue;
   font-weight: bolder;
 }
 /**

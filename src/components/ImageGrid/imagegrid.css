@@ -1,0 +1,17 @@
+.grid-height {
+  height: auto;
+}
+
+.grid-width {
+  width: 100vw;
+}
+
+@media (min-width: 40rem) {
+  .grid-height {
+    height: auto;
+  }
+
+  .grid-width {
+    width: 100vw;
+  }
+}

@@ -82,7 +82,7 @@ button,
 .button:hover,
 .hamburger-button:hover,
 .gift-card-button:hover {
-  background-color: #d1d1d1;
+  background-color: #f7d75c;
 }
 
 button,
@@ -104,6 +104,10 @@ a,
 span.button-link,
 .cta {
   color: dodgerBlue;
+}
+
+a > svg:hover {
+  fill: red;
 }
 
 .cta--down {
@@ -135,6 +139,15 @@ span.button-link,
 a:hover,
 span.button-link {
   cursor: pointer;
+}
+
+svg:hover {
+  fill: #f7d75c;
+}
+
+.MuiPaper-root {
+  background-color: rgb(34, 34, 34) !important;
+  color: white !important;
 }
 
 @media (min-width: 40rem) {
