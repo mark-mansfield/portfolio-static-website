@@ -27,6 +27,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.7.0",
+    "react-lazyload": "^2.6.2",
     "react-modal": "^3.8.1",
     "react-scroll-to-element": "^0.2.0",
     "react-scrollspy": "^3.4.0",

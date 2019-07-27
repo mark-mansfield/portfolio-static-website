@@ -1,4 +1,5 @@
 import React from "react"
+import LazyLoad from "react-lazyload"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import Modal from "react-modal"
@@ -178,7 +179,7 @@ class Index extends React.Component {
     const sideList = (
       <div className={classes.list}>
         <List>
-          <Scroll type="class" element="food__sub-nav">
+          <Scroll type="class" element="food-scroll-to-point">
             <ListItem button key="menu" style={{ textAlign: "center" }}>
               <ListItemText primary="Menu" />
             </ListItem>
@@ -258,7 +259,6 @@ class Index extends React.Component {
           sticky={this.state.stickySubNav}
           sideDrawerState={this.toggleDrawer}
         />
-
         <Modal
           closeTimeoutMS={300}
           style={style}
@@ -281,7 +281,6 @@ class Index extends React.Component {
           <br />
           <Reservation />
         </Modal>
-
         <Modal
           closeTimeoutMS={300}
           style={style}
@@ -301,7 +300,6 @@ class Index extends React.Component {
 
           <GiftCards />
         </Modal>
-
         <Modal
           closeTimeoutMS={300}
           style={style}
@@ -321,7 +319,6 @@ class Index extends React.Component {
 
           <Newsletter />
         </Modal>
-
         <Drawer
           open={this.state.left}
           onClose={this.toggleDrawer("left", false)}
@@ -335,14 +332,12 @@ class Index extends React.Component {
             {sideList}
           </div>
         </Drawer>
-
         <SubNav
           sticky={this.state.stickySubNav}
           modalState={this._handleShowModal.bind(this)}
           giftCardModalState={this._handleShowGiftCardModal.bind(this)}
           sideDrawerState={this.toggleDrawer}
         />
-
         {this.state.enableWaypoint && (
           <Waypoint
             scrollableAncestor={null}
@@ -350,7 +345,6 @@ class Index extends React.Component {
             onLeave={this._handleSubNavWaypointLeave}
           />
         )}
-
         <section id="overview" className="venue-details">
           <div className="page_section container">
             <div className="page_section-wrapper">
@@ -583,7 +577,6 @@ class Index extends React.Component {
             </div>
           </div>
         </section>
-
         <section id="about_us">
           <div className="page_section container">
             <div className="section__details">
@@ -602,52 +595,53 @@ class Index extends React.Component {
             </div>
           </div>
         </section>
-
         <section>
-          <div className="parallax-1 parallax-height-lge">
-            <div
-              style={{
-                display: "grid",
-                placeItems: "center",
-                width: "100vw",
-                backgroundColor: "rgba(0,0,0,0.8)",
-                height: "100%",
-              }}
-            >
-              <div className="subscription">
-                <h1 className="subscription__heading">Subscribe</h1>
-                <div
-                  className="subscription__content"
-                  style={{
-                    color: "white",
-                  }}
-                >
-                  <div className="subscription__message">
-                    Subscribe to receive be eligible for out loyalty program
-                  </div>
-
-                  <button
-                    onClick={this._handleShowNewsletterModal}
-                    className="form-button-accent"
+          <LazyLoad height={"200px"}>
+            <div className="parallax-1 parallax-height-lge">
+              <div
+                style={{
+                  display: "grid",
+                  placeItems: "center",
+                  width: "100vw",
+                  backgroundColor: "rgba(0,0,0,0.8)",
+                  height: "100%",
+                }}
+              >
+                <div className="subscription">
+                  <h1 className="subscription__heading">Subscribe</h1>
+                  <div
+                    className="subscription__content"
+                    style={{
+                      color: "white",
+                    }}
                   >
-                    Subscribe
-                  </button>
+                    <div className="subscription__message">
+                      Subscribe to receive be eligible for out loyalty program
+                    </div>
+
+                    <button
+                      onClick={this._handleShowNewsletterModal}
+                      className="form-button-accent"
+                    >
+                      Subscribe
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </LazyLoad>
         </section>
-
-        <ImageGrid />
-
+        <LazyLoad height={"757px"}>
+          <ImageGrid />
+        </LazyLoad>
         <section>
-          <div className="parallax-1 parallax-height-lge"></div>
+          <LazyLoad height={"300px"}>
+            <div className="parallax-1 parallax-height-lge"></div>
+          </LazyLoad>
         </section>
-
         {/* <section>
           <div className="parallax-1 parallax-height-sml" />
         </section> */}
-
         <section className="message">
           <div className="page_section container">
             <div className="section__details">
@@ -665,15 +659,16 @@ class Index extends React.Component {
             </div>
           </div>
         </section>
-
-        <section className="food">
+        <section className="food food-scroll-to-point">
           <section className="page_section container">
-            <Food />
+            <LazyLoad height={"1900px"}>
+              <Food />
+            </LazyLoad>
           </section>
         </section>
-
-        <section className="parallax-2" />
-
+        <LazyLoad height={"200px"}>
+          <section className="parallax-2" />
+        </LazyLoad>
         <section id="contact" className="page_section container">
           <div className="page_section container">
             <div className="section__details align-top">
@@ -754,16 +749,22 @@ class Index extends React.Component {
                 style={{ width: "100%" }}
                 className="section__details-info-inner-content"
               >
-                <Contact />
+                <LazyLoad height={"436px"}>
+                  <Contact />
+                </LazyLoad>
               </div>
             </div>
           </div>
+
           <div className="page__section-border" />
         </section>
-        <div id="reservations-scollTo-point" />
 
-        <section id="reservations" className="page_section container">
-          <div className="page_section container">
+        <section className="page_section container">
+          <div
+            className="page_section container"
+            id="reservations-scollTo-point"
+            style={{ marginTop: "200px" }}
+          >
             <div className="section__details">
               <div>
                 <h1>Reservations</h1>
@@ -816,7 +817,6 @@ class Index extends React.Component {
           </div>
           <div className="page__section-border" />
         </section>
-
         <section id="groups" className="page_section container">
           <div className="page_section container">
             <div className="section__details">
@@ -847,7 +847,6 @@ class Index extends React.Component {
             </div>
           </div>
         </section>
-
         <section id="footer">
           <div>
             <Footer modalState={this._handleShowNewsletterModal.bind(this)} />

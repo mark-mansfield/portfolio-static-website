@@ -24,7 +24,7 @@ class StickyNav extends React.Component {
           </div>
           <div className="sub__nav-mid-part">
             <div className="menus-option">
-              <Scroll type="class" element="food__sub-nav">
+              <Scroll type="class" element="food-scroll-to-point">
                 <button
                   className="simple-button"
                   id="menu-button"
