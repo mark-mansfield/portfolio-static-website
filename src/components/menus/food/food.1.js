@@ -64,12 +64,8 @@ class Food extends React.PureComponent {
               <br />
 
               <div id="food-menu">
-                <ul
-                  className="menu__nav-bar menu__nav-bar-tabs"
-                  role="tablist"
-                  aria-controls="menuInfo"
-                >
-                  <li>
+                <ul className="menu__nav-bar menu__nav-bar-tabs" role="tablist">
+                  <li role="tab">
                     <button
                       role="menuitem"
                       onClick={() => this.clearComponents("breakfast")}
@@ -83,7 +79,7 @@ class Food extends React.PureComponent {
                       Breakfast
                     </button>
                   </li>
-                  <li>
+                  <li role="tab">
                     <button
                       role="menuitem"
                       onClick={() => this.clearComponents("brunch")}
@@ -97,7 +93,7 @@ class Food extends React.PureComponent {
                       Brunch
                     </button>
                   </li>
-                  <li>
+                  <li role="tab">
                     <button
                       role="menuitem"
                       onClick={() => this.clearComponents("lunch")}
@@ -111,7 +107,7 @@ class Food extends React.PureComponent {
                       Lunch
                     </button>
                   </li>
-                  <li>
+                  <li role="tab">
                     <button
                       role="menuitem"
                       onClick={() => this.clearComponents("dinner")}

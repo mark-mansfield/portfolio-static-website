@@ -11,7 +11,11 @@ const scrollToTop = () => {
           justifyContent: "flex-end",
         }}
       >
-        <button className="simple-button">
+        <button
+          className="simple-button"
+          id="scroll-to-food-menu-start"
+          aria-label="back to start of food menu"
+        >
           <svg
             enableBackground="new 0 0 96 96"
             height="30px"

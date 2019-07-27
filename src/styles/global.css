@@ -1,6 +1,15 @@
-@import url("https://fonts.googleapis.com/css?family=Lato|Merriweather:300");
 @import url("./page.section.css");
 @import url("./normalize.8.0.1.css");
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local("Lato Regular"), local("Lato-Regular"),
+    url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2)
+      format("woff2");
+}
 
 :root {
   --default-px-font-size: 16px;

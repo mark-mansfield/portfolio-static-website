@@ -25,28 +25,44 @@ class StickyNav extends React.Component {
           <div className="sub__nav-mid-part">
             <div className="menus-option">
               <Scroll type="class" element="food__sub-nav">
-                <button className="simple-button">
+                <button
+                  className="simple-button"
+                  id="menu-button"
+                  aria-label="food-menu"
+                >
                   <small>MENU</small>
                 </button>
               </Scroll>
             </div>
             <div className="reservations-option">
               <Scroll type="id" element="reservations">
-                <button className="simple-button">
+                <button
+                  className="simple-button"
+                  id="reservations-button"
+                  aria-label="reservations"
+                >
                   <small>RESERVATIONS</small>
                 </button>
               </Scroll>
             </div>
             <div className="groups-option">
               <Scroll type="id" element="groups">
-                <button className="simple-button">
+                <button
+                  className="simple-button"
+                  id="group-events-button"
+                  aria-label="group events"
+                >
                   <small>GROUPS</small>
                 </button>
               </Scroll>
             </div>
             <div className="contact-option">
               <Scroll type="id" element="contact">
-                <button className="simple-button">
+                <button
+                  className="simple-button"
+                  id="contact-us-button"
+                  aria-label="contact us"
+                >
                   <small>CONTACT</small>
                 </button>
               </Scroll>

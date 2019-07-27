@@ -229,7 +229,7 @@ section#about_us {
 
 @media (min-width: 40rem) {
   .parallax-2 {
-    background-image: url("../images/BS-parallax-2.jpg");
+    background-image: url("../images/BS-parallax-2-opt.jpg");
     opacity: 0.3;
     height: 200px;
     background-attachment: fixed;
@@ -239,7 +239,7 @@ section#about_us {
   }
 
   .parallax-1 {
-    background-image: url("../images/BS-parallax.jpg");
+    background-image: url("../images/BS-parallax-opt.jpg");
     height: 200px;
     background-attachment: fixed;
     background-position: center;
