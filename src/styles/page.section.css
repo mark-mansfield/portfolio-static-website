@@ -227,6 +227,10 @@ section#about_us {
   width: 90%;
 }
 
+.reservations,
+#contact {
+  height: 100vh;
+}
 @media (min-width: 40rem) {
   .parallax-2 {
     background-image: url("../images/BS-parallax-2-opt.jpg");
@@ -249,10 +253,6 @@ section#about_us {
 
   .parallax-height-lge {
     height: 300px;
-  }
-
-  .parallax-height-sml {
-    height: 200px;
   }
 
   .message {

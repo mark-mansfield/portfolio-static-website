@@ -47,7 +47,7 @@ label {
 button.form-button-accent {
   background-color: dodgerBlue;
   color: white;
-  margin-right: 10px;
+  border-left: 1px solid #000;
 }
 
 button.form-button-accent:hover {

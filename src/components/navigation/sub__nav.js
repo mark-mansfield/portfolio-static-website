@@ -24,7 +24,11 @@ class StickyNav extends React.Component {
           </div>
           <div className="sub__nav-mid-part">
             <div className="menus-option">
-              <Scroll type="class" element="food-scroll-to-point">
+              <Scroll
+                type="class"
+                element="food-scroll-to-point"
+                offset={-1200}
+              >
                 <button
                   className="simple-button"
                   id="menu-button"
@@ -35,7 +39,7 @@ class StickyNav extends React.Component {
               </Scroll>
             </div>
             <div className="reservations-option">
-              <Scroll type="id" element="reservations">
+              <Scroll type="id" element="reservations-scollTo-point">
                 <button
                   className="simple-button"
                   id="reservations-button"
@@ -57,7 +61,7 @@ class StickyNav extends React.Component {
               </Scroll>
             </div>
             <div className="contact-option">
-              <Scroll type="id" element="contact">
+              <Scroll type="id" element="contact" offset={-400}>
                 <button
                   className="simple-button"
                   id="contact-us-button"
