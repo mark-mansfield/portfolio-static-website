@@ -47,6 +47,8 @@ h6 {
 
 li {
   margin: none !important;
+
+  margin: 20px auto;
 }
 
 ul {
@@ -113,6 +115,7 @@ a,
 span.button-link,
 .cta {
   color: dodgerBlue;
+  text-decoration: none;
 }
 
 a > svg:hover {

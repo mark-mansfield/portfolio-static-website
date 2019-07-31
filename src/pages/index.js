@@ -163,6 +163,9 @@ class Index extends React.Component {
         backgroundColor: "black",
         zIndex: 20000,
       },
+      ul: {
+        margin: "auto",
+      },
     }
 
     // open times
@@ -177,49 +180,35 @@ class Index extends React.Component {
     const { classes } = this.props
 
     const sideList = (
-      <div className={classes.list}>
-        <List>
-          <Scroll type="class" element="food-scroll-to-point" offset={-1900}>
-            <ListItem button key="menu" style={{ textAlign: "center" }}>
-              <ListItemText primary="Menu" />
-            </ListItem>
-          </Scroll>
-
-          <ListItem button key="gift" style={{ textAlign: "center" }}>
-            <ListItemText
-              primary="Gift Cards"
-              onClick={this._handleShowGiftCardModal.bind(this)}
-            />
-          </ListItem>
-
-          <Scroll type="id" element="contact">
-            <ListItem button key="contact" style={{ textAlign: "center" }}>
-              <ListItemText primary="Contact" />
-            </ListItem>
-          </Scroll>
-          <Scroll type="id" element="reservations-scollTo-point">
-            <ListItem button key="reservations" style={{ textAlign: "center" }}>
-              <ListItemText primary="Reservations" />
-            </ListItem>
-          </Scroll>
-          <Scroll type="id" element="groups">
-            <ListItem button key="groups" style={{ textAlign: "center" }}>
-              <ListItemText primary="Groups" />
-            </ListItem>
-          </Scroll>
-          <Scroll type="id" element="private-events-scollTo-point">
-            <ListItem
-              button
-              key="private_events"
-              style={{ textAlign: "center" }}
-            >
-              <ListItemText primary="Private Events" />
-            </ListItem>
-          </Scroll>
-        </List>
-        <Divider />
-        <List>
-          <ListItem style={{ flexFlow: "column" }}>
+      <div
+        style={{
+          textAlign: "center",
+          width: "220px",
+          display: "flex",
+          flexFlow: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <ul>
+          <li>
+            <a href="#food">Food</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+          <li>
+            <a href="#contact">Reservations</a>
+          </li>
+          <li>
+            <a href="#contact">Groups</a>
+          </li>
+          <li>
+            <a href="#contact">Private Events</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
             <div className="phone_number">PH: (02) 9130 1566</div>
             <br />
             {/* eslint-disable jsx-a11y/anchor-has-content */}
@@ -228,24 +217,18 @@ class Index extends React.Component {
               id="callnowbutton"
               title="call now"
               aria-label="call us button"
+              style={{ margin: "auto" }}
             />
-          </ListItem>
-        </List>
-        <Divider />
-        <List>
-          {[
-            "106 Curlewis St, Bondi Beach NSW 2026",
-            "Dinner tuesday - Sunday",
-            "Breakfast - Firday to Sunday",
-          ].map((text, index) => (
-            <ListItem
-              key={text}
-              style={{ flexFlow: "column", textAlign: "center" }}
-            >
-              {text}
-            </ListItem>
-          ))}
-        </List>
+          </li>
+
+          <li>
+            106 Curlewis St, Bondi Beach NSW 2026
+            <br />
+            Dinner tuesday - Sunday
+            <br />
+            Breakfast - Friday to Sunday
+          </li>
+        </ul>
       </div>
     )
     return (
@@ -576,7 +559,7 @@ class Index extends React.Component {
             </div>
           </div>
         </section>
-        <section id="about_us">
+        <section id="about_us" style={{ height: "400px" }}>
           <div className="page_section container">
             <div className="section__details">
               <div
@@ -595,7 +578,7 @@ class Index extends React.Component {
           </div>
         </section>
         <section>
-          <LazyLoad height={"600px"}>
+          <LazyLoad height={300} resize={true}>
             <div className="parallax-1 parallax-height-lge">
               <div
                 style={{
@@ -630,16 +613,16 @@ class Index extends React.Component {
             </div>
           </LazyLoad>
         </section>
-        <LazyLoad height={"1200px"}>
+        <LazyLoad height={800} resize={true}>
           <ImageGrid />
         </LazyLoad>
         <section>
-          <LazyLoad height={"700px"}>
+          <LazyLoad height={300} resize={true}>
             <div className="parallax-1 parallax-height-lge"></div>
           </LazyLoad>
         </section>
 
-        <section className="message">
+        <section className="message" style={{ height: "300px" }}>
           <div className="page_section container">
             <div className="section__details">
               <h3
@@ -656,17 +639,20 @@ class Index extends React.Component {
             </div>
           </div>
         </section>
-        <section className="food food-scroll-to-point">
+        <section
+          className="food food-scroll-to-point"
+          id="food-scroll-to-point"
+        >
           <section className="page_section container">
-            <LazyLoad>
-              <Food height={2182} />
-            </LazyLoad>
+            <a name="food"></a>
+            <Food />
           </section>
         </section>
 
-        <LazyLoad height={400}>
+        <LazyLoad height={200}>
           <section className="parallax-2" />
         </LazyLoad>
+
         <section className="page_section container">
           <div className="page_section container">
             <div className="section__details align-top">
@@ -677,15 +663,15 @@ class Index extends React.Component {
                   justifyContent: "space-evenly",
                   alignItems: "center",
                 }}
-              >
-                <h1>Contact Us</h1>
-              </div>
+              ></div>
               <div
                 id="contact"
                 style={{ width: "100%" }}
                 className="section__details-info-inner-content"
               >
-                <LazyLoad height={800}>
+                <a name="contact"></a>
+                <h1 style={{ marginTop: "100px" }}>Contact Us</h1>
+                <LazyLoad height={200}>
                   <Contact />
                 </LazyLoad>
               </div>

@@ -149,7 +149,7 @@ section#about_us {
   background-color: black;
   width: 100%;
   height: auto;
-  min-height: 400px;
+  /* min-height: 400px; */
   display: grid;
 }
 
@@ -224,14 +224,15 @@ section#about_us {
 
 .subscription > div > button {
   display: block;
+  z-index: 999;
   width: 90%;
 }
 
-.reservations,
+/* .reservations,
 #contact {
   height: 100vh;
-}
-@media (min-width: 40rem) {
+} */
+@media (min-width: 48rem) {
   .parallax-2 {
     background-image: url("../images/BS-parallax-2-opt.jpg");
     opacity: 0.3;
@@ -255,6 +256,22 @@ section#about_us {
     height: 300px;
   }
 
+  .section__details {
+    flex-direction: column;
+  }
+  .subscription {
+    width: 40%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100%;
+  }
+  .subscription__heading,
+  .subscription__message {
+    display: block;
+  }
+}
+@media (min-width: 64rem) {
   .message {
     margin-bottom: 0px !important;
   }
