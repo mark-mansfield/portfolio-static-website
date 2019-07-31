@@ -166,6 +166,9 @@ class Index extends React.Component {
       ul: {
         margin: "auto",
       },
+      li: {
+        margin: '20px auto';
+      }
     }
 
     // open times
@@ -191,24 +194,24 @@ class Index extends React.Component {
         }}
       >
         <ul>
-          <li>
+          <li style={style.li}>
             <a href="#food">Food</a>
           </li>
-          <li>
+          <li style={style.li}>
             <a href="#contact">Contact</a>
           </li>
-          <li>
+          <li style={style.li}>
             <a href="#contact">Reservations</a>
           </li>
-          <li>
+          <li style={style.li}>
             <a href="#contact">Groups</a>
           </li>
-          <li>
+          <li style={style.li}>
             <a href="#contact">Private Events</a>
           </li>
         </ul>
         <ul>
-          <li>
+          <li style={style.li}>
             <div className="phone_number">PH: (02) 9130 1566</div>
             <br />
             {/* eslint-disable jsx-a11y/anchor-has-content */}
@@ -221,7 +224,7 @@ class Index extends React.Component {
             />
           </li>
 
-          <li>
+          <li style={style.li}>
             106 Curlewis St, Bondi Beach NSW 2026
             <br />
             Dinner tuesday - Sunday
