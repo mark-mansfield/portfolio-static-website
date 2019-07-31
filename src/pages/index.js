@@ -167,8 +167,8 @@ class Index extends React.Component {
         margin: "auto",
       },
       li: {
-        margin: '20px auto';
-      }
+        margin: "20px auto",
+      },
     }
 
     // open times
