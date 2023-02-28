@@ -8,4 +8,4 @@ A simple gatsby / react static website I created to showcase my portfolio of wor
 # Usage
 downalod the repo  
 cd into project folder
-gatsby develop
+run ``gatsby develop``
