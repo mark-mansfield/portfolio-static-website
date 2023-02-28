@@ -5,7 +5,7 @@ A simple gatsby / react static website I created to showcase my portfolio of wor
 [Check it out here](https://mark-mansfield.github.io/myreact-website/)
 
 
-##Usage
+# Usage
 downalod the repo  
 cd into project folder
 gatsby develop
