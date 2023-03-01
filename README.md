@@ -1,6 +1,6 @@
-# My Portfolio Website
+# Local Restaurant Website
 
-A simple gatsby / react static website I created to showcase my portfolio of work
+A simple SPA react react app suitable for your favourite local restaurant
 
 [Check it out here](https://mark-mansfield.github.io/myreact-website/)
 
