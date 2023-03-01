@@ -2,7 +2,7 @@
 
 A simple SPA react react app suitable for your favourite local restaurant
 
-[Check it out here](https://mark-mansfield.github.io/myreact-website/)
+[Check it out here](https://mark-mansfield.github.io/portfolio-static-website/)
 
 
 # Usage
